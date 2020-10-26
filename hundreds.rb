@@ -26,7 +26,7 @@ class Hundreds
           1 => { "hundred" => [C.new] },
           2 => { "hundred" => [C.new, C.new] },
           3 => { "hundred" => [C.new, C.new, C.new] },
-          4 => { "hundred" => [C.new], "five_hundred" => [L.new] },
+          4 => { "hundred" => [C.new], "five_hundred" => [D.new] },
           5 => { "five_hundred" => [D.new] },
           6 => { "five_hundred" => [D.new], "hundred" => [C.new] },
           7 => { "five_hundred" => [D.new], "hundred" => [C.new, C.new] },

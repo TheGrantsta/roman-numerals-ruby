@@ -2,7 +2,7 @@ require_relative "converter"
 
 #Largest roman numeral - MMMCMXCIX, or 3,999
 
-RSpec.describe Foo do
+RSpec.describe Converter do
   describe "single digits - 1 to 9" do
     it "should show the right output" do
       tests = {
@@ -19,9 +19,9 @@ RSpec.describe Foo do
         }
 
       tests.each do |k, v|
-        foo = Foo.new k
+        converter = Converter.new k
 
-        expect(foo.output).to eq(v), "expected #{v} but got #{foo.output}"
+        expect(converter.output).to eq(v), "expected #{v} but got #{converter.output}"
       end
     end
   end
@@ -42,9 +42,9 @@ RSpec.describe Foo do
         }
 
       tests.each do |k, v|
-        foo = Foo.new k
+        converter = Converter.new k
 
-        expect(foo.output).to eq(v), "expected #{v} but got #{foo.output}"
+        expect(converter.output).to eq(v), "expected #{v} but got #{converter.output}"
       end
     end
   end
@@ -65,9 +65,9 @@ RSpec.describe Foo do
         }
 
       tests.each do |k, v|
-        foo = Foo.new k
+        converter = Converter.new k
 
-        expect(foo.output).to eq(v), "expected #{v} but got #{foo.output}"
+        expect(converter.output).to eq(v), "expected #{v} but got #{converter.output}"
       end
     end
   end
@@ -88,9 +88,9 @@ RSpec.describe Foo do
         }
 
       tests.each do |k, v|
-        foo = Foo.new k
+        converter = Converter.new k
 
-        actual = foo.output
+        actual = converter.output
 
         expect(actual).to eq(v), "expected #{v} but got #{actual}"
       end
@@ -111,9 +111,32 @@ RSpec.describe Foo do
         }
 
       tests.each do |k, v|
-        foo = Foo.new k
+        converter = Converter.new k
 
-        actual = foo.output
+        actual = converter.output
+
+        expect(actual).to eq(v), "expected #{v} but got #{actual}"
+      end
+    end
+
+    it "should show the right output - 450 to 459" do
+      tests = {
+          450 => "CDL",
+          451 => "CDLI",
+          452 => "CDLII",
+          453 => "CDLIII",
+          454 => "CDLIV",
+          455 => "CDLV",
+          456 => "CDLVI",
+          457 => "CDLVII",
+          458 => "CDLVIII",
+          459 => "CDLIX"
+        }
+
+      tests.each do |k, v|
+        converter = Converter.new k
+
+        actual = converter.output
 
         expect(actual).to eq(v), "expected #{v} but got #{actual}"
       end
@@ -134,9 +157,9 @@ RSpec.describe Foo do
         }
 
       tests.each do |k, v|
-        foo = Foo.new k
+        converter = Converter.new k
 
-        actual = foo.output
+        actual = converter.output
 
         expect(actual).to eq(v), "expected #{v} but got #{actual}"
       end

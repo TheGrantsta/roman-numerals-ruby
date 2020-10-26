@@ -13,10 +13,14 @@ class Split
   end
 
   def get_output
-    output = get_thousands_output
-    output += get_hundreds_output
-    output += get_tens_output
-    output += get_unit_output
+    if @input < 1 || @input >= 4000
+      output = "Please enter a number equal to or greater than 1 and less than 4000"
+    else
+      output = get_thousands_output
+      output += get_hundreds_output
+      output += get_tens_output
+      output += get_unit_output
+    end
   end
 
   private
